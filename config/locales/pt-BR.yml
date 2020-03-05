@@ -1,5 +1,9 @@
 pt-BR:
   activerecord:
+    model:
+      user:
+        one: "Usuário"
+        other: "Usuários"
     attributes:
       default: &default
         created_at: "Criado em"
@@ -8,4 +12,13 @@ pt-BR:
         <<: *default
         description: "Descrição"
         photo: "Foto"
+
+      user: 
+        <<: *default
+        name: 'Nome'
+        email: 'Email'
+        username: 'Nome de usuário'
+        password: 'Senha'
+        #password: 'Confirmação de senha'
+
  
