@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   before_action :set_suggested_users, only: %i[index]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   def show; end
@@ -21,6 +21,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, notice: 'Post foi criado com sucesso'
     else
+      flash.now[:alert] = @post.errors.full_messages.to_sentence
       render :new
     end
   end
@@ -34,6 +35,6 @@ class PostsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def post_params
-    params.require(:post).permit(:description)
+    params.require(:post).permit(:photo, :description)
   end
 end

@@ -1,7 +1,7 @@
 <article class="post">
   <header>
     <nav>
-      <%= image_tag "default-avatar.jpg", class: "photo" %>
+      <%= user_avatar(post.created_by) %>
       <h4><%= post.created_by.username %></h4>
     </nav>
     <nav class="actions">
@@ -11,14 +11,15 @@
     </nav>
   </header>
   <section class="image">
-    <%= image_tag "https://i.picsum.photos/id/0/5616/3744.jpg" %>
+    <%= image_tag post.photo %>
   </section>
   <div class="details">
     <section class="actions">
       <nav>
-        <div class="action">
+        <!-- <div class="action">
           <%= embedded_svg "like.svg" %>
-        </div>
+        </div> -->
+        <%= render "likes/like", post: post %>
         <div class="action">
           <%= link_to post do %>
             <%= embedded_svg "comment.svg" %>

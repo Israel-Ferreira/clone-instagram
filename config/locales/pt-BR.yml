@@ -20,5 +20,10 @@ pt-BR:
         username: 'Nome de usuário'
         password: 'Senha'
         #password: 'Confirmação de senha'
+  errors:
+    messages:
+      content_type_invalid: "Tipo de Arquivo Inválido"
+      file_size_out_of_range: "Tem %{file_size} mas o tamanho é de 5 MB"
+
 
  
