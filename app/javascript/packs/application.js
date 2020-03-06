@@ -18,3 +18,4 @@ require("channels")
 import './src/stylesheets/application.css'
 import './src/js/flashMessages'
 import './src/js/modal'
+import './src/js/likes'
