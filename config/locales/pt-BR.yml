@@ -4,6 +4,9 @@ pt-BR:
       user:
         one: "Usuário"
         other: "Usuários"
+      comment:
+        one: "Comentário"
+        other: "Comentários"
     attributes:
       default: &default
         created_at: "Criado em"
@@ -12,6 +15,10 @@ pt-BR:
         <<: *default
         description: "Descrição"
         photo: "Foto"
+
+      comment:
+        <<: *default
+        body: "Comentário"
 
       user: 
         <<: *default
